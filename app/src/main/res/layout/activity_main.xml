@@ -90,6 +90,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/indicator"
                 android:gravity="center"
+                app:elevation="0dp"
                 android:background="@color/white"
                 >
             <androidx.appcompat.widget.Toolbar

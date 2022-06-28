@@ -44,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.img.setImageResource(mData.get(position).getImage());
         holder.dat.setText(mData.get(position).getDate());
         holder.cur.setText(mData.get(position).getCurrency());
-        if (mData.get(position).getCurrency().equals("10 AZN")){
+        if (mData.get(position).getCurrency().equals("0.5 AZN")){
             holder.cur.setTextColor(Color.RED);
         }else{
             holder.cur.setTextColor(Color.parseColor("#317301"));
