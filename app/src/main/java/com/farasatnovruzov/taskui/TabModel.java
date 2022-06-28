@@ -3,11 +3,31 @@ package com.farasatnovruzov.taskui;
 public class TabModel {
 
     private String name;
+    private String date;
+    private String currency;
     private int image;
 
-    public TabModel(String name, int image) {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public TabModel(String name, int image, String date, String currency) {
         this.name = name;
         this.image = image;
+        this.date = date;
+        this.currency = currency;
     }
 
     public String getName() {

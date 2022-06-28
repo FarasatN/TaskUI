@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Ana səhifə"
+        android:icon="@drawable/home_outline"/>
+    <item
+        android:id="@+id/payments"
+        android:title="Ödəmələr"
+        android:icon="@drawable/wallet_outline"/>
+    <item
+        android:id="@+id/transfers"
+        android:title="Köçürmələr"
+        android:icon="@drawable/transfer_outline2"/>
+    <item
+        android:id="@+id/templates"
+        android:title="Şablonlar"
+        android:icon="@drawable/star_outline"/>
+</menu>

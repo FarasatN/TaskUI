@@ -66,5 +66,10 @@ public class Adapter extends PagerAdapter {
         container.removeView((View) object);
     }
 
+    @Override
+    public float getPageWidth(int position) {
+        return 0.8999f;
+    }
+
 
 }

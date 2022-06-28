@@ -9,15 +9,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.animation.ArgbEvaluator;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,9 +35,14 @@ import android.widget.Toast;
 import com.farasatnovruzov.taskui.fragments.BlockedFragment;
 import com.farasatnovruzov.taskui.fragments.FirstCardFragment;
 import com.farasatnovruzov.taskui.fragments.FourthCardFragment;
+import com.farasatnovruzov.taskui.fragments.HomeFragment;
 import com.farasatnovruzov.taskui.fragments.LastOperationsFragment;
+import com.farasatnovruzov.taskui.fragments.PaymentsFragment;
 import com.farasatnovruzov.taskui.fragments.SecondCardFragment;
+import com.farasatnovruzov.taskui.fragments.TemplatesFragment;
 import com.farasatnovruzov.taskui.fragments.ThirdCardFragment;
+import com.farasatnovruzov.taskui.fragments.TransfersFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -48,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //    androidx.appcompat.widget.Toolbar toolbar;
     DrawerLayout mDrawerLayout;
     NavigationView navigationView;
-    ViewPager viewPager;
     Adapter adapter;
     Integer[] colors = null;
     List<Model> models;
@@ -58,12 +68,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView item1, item2, select;
 
 
+    private ViewPager viewPager;
+    private ViewPager sliderViewPager;
+    private Handler sliderHandler = new Handler();
 
 
     List<Fragment> fragmentList = new ArrayList<>();
     List<String> tabTitle = new ArrayList<>();
 
 
+    private Runnable sliderRunnable  = new Runnable() {
+        @Override
+        public void run() {
+            sliderViewPager.setCurrentItem(sliderViewPager.getCurrentItem() + 1);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +96,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+        sliderViewPager = findViewById(R.id.viewPager);
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.debit));
+        sliderItems.add(new SliderItem(R.drawable.debit));
+        sliderItems.add(new SliderItem(R.drawable.debit));
+        sliderItems.add(new SliderItem(R.drawable.debit));
+//        sliderViewPager.setAdapter(new SliderAdapter(sliderItems, sliderViewPager));
+//        sliderViewPager.setClipToPadding(false);
+//        sliderViewPager.setClipChildren(false);
+//        sliderViewPager.setOffscreenPageLimit(3);
+//        sliderViewPager.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+
+        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
+        compositePageTransformer.addTransformer(new MarginPageTransformer(40));
+//        compositePageTransformer.addTransformer(new ViewPager.PageTransformer(){
+
+//            @Override
+//            public void transformPage(@NonNull View page, float position) {
+//                float r = 1 - Math.abs(position);
+//                page.setScaleY(0.85f + r * 0.15f);
+//            }
+//        });
+//
+//        sliderViewPager.setPageTransformer(compositePageTransformer);
+//        sliderViewPager.registerOnPageChangeCallBack(new ViewPager2.OnPageChangeCallback{
+//            @Override
+//                    public void onPageSelected(int position){
+//                super.onPageSelected(position);
+//                sliderHandler.removeCallbacks(sliderRunnable);
+//                sliderHandler.postDelayed(sliderRunnable, 3000)
+//            }
+//        });
 
 
         toolbar = findViewById(R.id.toolbar);
@@ -99,20 +151,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         models = new ArrayList<>();
         models.add(new Model(R.drawable.debit));
-        models.add(new Model(R.drawable.debit2));
-        models.add(new Model(R.drawable.debit3));
-        models.add(new Model(R.drawable.debit4));
+        models.add(new Model(R.drawable.debit));
+        models.add(new Model(R.drawable.debit));
+        models.add(new Model(R.drawable.debit));
         adapter = new Adapter(models,this);
 //        viewPager = findViewById(R.id.viewPager);
 
-        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         FragmentViewPagerAdapter fragmentAdapter = new FragmentViewPagerAdapter(getSupportFragmentManager());
         CircleIndicator circleIndicator = findViewById(R.id.indicator);
-
+//        viewPager.setAdapter(new Adapter(models, viewPager));
         viewPager.setAdapter(adapter);
 
 //        viewPager.setAdapter(fragmentAdapter);
         circleIndicator.setViewPager(viewPager);
+//        viewPager.setClipToPadding(true);
+//        viewPager.setClipChildren(true);
+//        viewPager.setOffscreenPageLimit(3);
+        viewPager.setPadding(80,0,0,0);
+//        viewPager.getChildAt(0).setOverScrollMode(ViewPager.OVER_SCROLL_NEVER);
+
+
 //        adapter.registerDataSetObserver(indicator.getDataSetObserver());
 //        indicator.createIndicators(5,0);
 //        indicator.animatePageSelected(2);
@@ -179,9 +238,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         };
         colors = colors_temp;
+         int mCurrentPage;
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
                 if(position < (adapter.getCount() - 1) && position < (colors.length-1)){
                     viewPager.setBackgroundColor((Integer) argbEvaluator.evaluate(positionOffset,colors[position], colors[position+1]));
                 }else{
@@ -191,6 +252,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onPageSelected(int position) {
+
+
                 System.out.println("current position: "+position);
                 if(position == 0){
                     mViewPager.setCurrentItem(0);
@@ -201,6 +264,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }else if(position == 3){
                     mViewPager.setCurrentItem(3);
                 }
+
+
 
             }
 
@@ -213,7 +278,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
@@ -264,6 +328,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             }
         });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView);
+        replaceFragment(new HomeFragment());
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()){
+
+                case R.id.home:
+                    replaceFragment(new HomeFragment());
+                    break;
+                case R.id.payments:
+                    replaceFragment(new PaymentsFragment());
+                    break;
+                case R.id.transfers:
+                    replaceFragment(new TransfersFragment());
+                    break;
+                case R.id.templates:
+                    replaceFragment(new TemplatesFragment());
+                    break;
+            }
+
+            return true;
+        });
+    }
+
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.constrainLayoutMain,fragment);
+        fragmentTransaction.commit();
     }
 
 //    public void onEyeClick(){

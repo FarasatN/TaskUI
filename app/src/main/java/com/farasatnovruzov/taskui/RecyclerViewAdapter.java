@@ -1,6 +1,7 @@
 package com.farasatnovruzov.taskui;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     Context mContext;
-    List<TabModel> mData;
+    List<TabModel> mData = new ArrayList<>();
+
+
+
 
     public RecyclerViewAdapter(Context context, List<TabModel> mData) {
         this.mContext = context;
@@ -33,8 +38,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+//        mData.add("Test",R.drawable.arrow_left_thick);
         holder.fName.setText(mData.get(position).getName());
         holder.img.setImageResource(mData.get(position).getImage());
+        holder.dat.setText(mData.get(position).getDate());
+        holder.cur.setText(mData.get(position).getCurrency());
+        if (mData.get(position).getCurrency().equals("10 AZN")){
+            holder.cur.setTextColor(Color.RED);
+        }else{
+            holder.cur.setTextColor(Color.parseColor("#317301"));
+        }
     }
 
     @Override
@@ -46,12 +60,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private TextView fName;
         private ImageView img;
+        private TextView dat;
+        private TextView cur;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             fName = itemView.findViewById(R.id.first_text);
             img = itemView.findViewById(R.id.img_first);
+            dat = itemView.findViewById(R.id.date);
+            cur = itemView.findViewById(R.id.currency);
+
         }
     }
 }

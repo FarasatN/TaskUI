@@ -43,34 +43,37 @@ public class FirstCardFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         mListModel = new ArrayList<>();
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
-        mListModel.add(new TabModel("First Card Data", android.R.drawable.ic_media_play));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+
 
     }
 }

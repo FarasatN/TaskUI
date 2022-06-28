@@ -32,6 +32,7 @@ public class FragmentViewPagerAdapter extends FragmentStatePagerAdapter {
                 return new Card3Fragment();
             case 4:
                 return new Card4Fragment();
+
             default: return new Card4Fragment();
         }
     }
