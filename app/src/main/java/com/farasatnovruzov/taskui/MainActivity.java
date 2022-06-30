@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,8 +67,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
     ColorStateList def;
-    TextView item1, item2, select;
-
+    TextView item1, item2, itemFull, select;
 
     private ViewPager viewPager;
     private ViewPager sliderViewPager;
@@ -96,6 +97,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+
+
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+        itemFull = findViewById(R.id.selectFull);
+
+        item1.setOnClickListener(this);
+        item2.setOnClickListener(this);
+
+        select = findViewById(R.id.select);
+        def = item2.getTextColors();
+
+
+
 
         sliderViewPager = findViewById(R.id.viewPager);
         List<SliderItem> sliderItems = new ArrayList<>();
@@ -261,8 +277,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     mViewPager.setCurrentItem(1);
                 }else if(position == 2){
                     mViewPager.setCurrentItem(2);
+
                 }else if(position == 3){
                     mViewPager.setCurrentItem(3);
+
                 }
 
 
@@ -285,12 +303,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 System.out.println("current mViewPager position: "+position);
                 if(position == 0){
                     viewPager.setCurrentItem(0);
+                    itemFull.setVisibility(View.INVISIBLE);
                 }else if(position == 1){
                     viewPager.setCurrentItem(1);
+                    itemFull.setVisibility(View.INVISIBLE);
                 }else if(position == 2){
                     viewPager.setCurrentItem(2);
+                    itemFull.setVisibility(View.VISIBLE);
+//                    item1.setVisibility(View.GONE);
+//                    item2.setVisibility(View.GONE);
+//                    select.setVisibility(View.GONE);
+
                 }else if(position == 3){
                     viewPager.setCurrentItem(3);
+                    itemFull.setVisibility(View.VISIBLE);
+//                    item1.setVisibility(View.GONE);
+//                    item2.setVisibility(View.GONE);
+//                    select.setVisibility(View.GONE);
                 }
             }
 
@@ -304,14 +333,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-        item1 = findViewById(R.id.item1);
-        item2 = findViewById(R.id.item2);
-
-        item1.setOnClickListener(this);
-        item2.setOnClickListener(this);
-
-        select = findViewById(R.id.select);
-        def = item2.getTextColors();
 
 
 
@@ -351,6 +372,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             return true;
         });
+
+
+
+
+
     }
 
     public void replaceFragment(Fragment fragment){
