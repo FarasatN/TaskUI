@@ -1,4 +1,4 @@
-package com.farasatnovruzov.taskui;
+package com.farasatnovruzov.taskui.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.farasatnovruzov.taskui.models.CardInfoModel;
+import com.farasatnovruzov.taskui.R;
 
 import java.util.List;
 

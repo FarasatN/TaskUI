@@ -1,10 +1,11 @@
-package com.farasatnovruzov.taskui;
+package com.farasatnovruzov.taskui.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.farasatnovruzov.taskui.models.CardModel;
 import com.farasatnovruzov.taskui.fragments.Card1Fragment;
 import com.farasatnovruzov.taskui.fragments.Card2Fragment;
 import com.farasatnovruzov.taskui.fragments.Card3Fragment;

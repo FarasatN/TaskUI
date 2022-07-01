@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.farasatnovruzov.taskui.R;
-import com.farasatnovruzov.taskui.RecyclerViewAdapter;
-import com.farasatnovruzov.taskui.CardInfoModel;
+import com.farasatnovruzov.taskui.adapters.RecyclerViewAdapter;
+import com.farasatnovruzov.taskui.models.CardInfoModel;
 
 import java.util.ArrayList;
 import java.util.List;

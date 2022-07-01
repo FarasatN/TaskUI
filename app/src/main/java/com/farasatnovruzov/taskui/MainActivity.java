@@ -23,6 +23,9 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import com.farasatnovruzov.taskui.adapters.CardAdapter;
+import com.farasatnovruzov.taskui.adapters.CustomViewPager;
+import com.farasatnovruzov.taskui.adapters.ViewPagerAdapter;
 import com.farasatnovruzov.taskui.fragments.FirstCardFragment;
 import com.farasatnovruzov.taskui.fragments.FourthCardFragment;
 import com.farasatnovruzov.taskui.fragments.HomeFragment;
@@ -31,6 +34,7 @@ import com.farasatnovruzov.taskui.fragments.SecondCardFragment;
 import com.farasatnovruzov.taskui.fragments.TemplatesFragment;
 import com.farasatnovruzov.taskui.fragments.ThirdCardFragment;
 import com.farasatnovruzov.taskui.fragments.TransfersFragment;
+import com.farasatnovruzov.taskui.models.CardModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 

@@ -1,4 +1,4 @@
-package com.farasatnovruzov.taskui;
+package com.farasatnovruzov.taskui.models;
 
 public class CardInfoModel {
 

@@ -132,7 +132,7 @@
         </com.google.android.material.tabs.TabLayout>
 
 
-        <com.farasatnovruzov.taskui.CustomViewPager
+        <com.farasatnovruzov.taskui.adapters.CustomViewPager
             android:scrollIndicators="none"
             android:id="@+id/tabViewPager"
             android:layout_width="match_parent"
@@ -144,7 +144,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tabLayout"
             tools:ignore="SpeakableTextPresentCheck"
             >
-        </com.farasatnovruzov.taskui.CustomViewPager>
+        </com.farasatnovruzov.taskui.adapters.CustomViewPager>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView"

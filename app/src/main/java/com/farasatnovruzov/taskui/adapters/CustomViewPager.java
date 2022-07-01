@@ -1,4 +1,4 @@
-package com.farasatnovruzov.taskui;
+package com.farasatnovruzov.taskui.adapters;
 
 import android.content.Context;
 import android.util.AttributeSet;

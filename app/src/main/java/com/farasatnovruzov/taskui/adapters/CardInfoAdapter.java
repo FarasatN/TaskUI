@@ -1,4 +1,4 @@
-package com.farasatnovruzov.taskui;
+package com.farasatnovruzov.taskui.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
