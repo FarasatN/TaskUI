@@ -9,7 +9,5 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-
     </style>
 </resources>

@@ -11,18 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    Context mContext;
-    List<TabModel> mData = new ArrayList<>();
+    private Context mContext;
+    private List<CardInfoModel> mData;
 
 
-
-
-    public RecyclerViewAdapter(Context context, List<TabModel> mData) {
+    public RecyclerViewAdapter(Context context, List<CardInfoModel> mData) {
         this.mContext = context;
         this.mData = mData;
     }

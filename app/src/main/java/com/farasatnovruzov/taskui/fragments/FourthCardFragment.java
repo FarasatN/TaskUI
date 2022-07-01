@@ -13,16 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.farasatnovruzov.taskui.R;
 import com.farasatnovruzov.taskui.RecyclerViewAdapter;
-import com.farasatnovruzov.taskui.TabModel;
+import com.farasatnovruzov.taskui.CardInfoModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FourthCardFragment extends Fragment {
 
-    View v;
+    private View v;
     private RecyclerView mRecyclerView;
-    private List<TabModel> mListModel;
+    private List<CardInfoModel> mListModel;
 
     public FourthCardFragment() {
     }
@@ -43,36 +43,36 @@ public class FourthCardFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         mListModel = new ArrayList<>();
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
-        mListModel.add(new TabModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
-        mListModel.add(new TabModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
+        mListModel.add(new CardInfoModel("Test", R.drawable.arrow_left_thick, "28.06.2022","0.5 AZN"));
+        mListModel.add(new CardInfoModel("AFB HEAD OFFICE", R.drawable.arrow_right_thick,"27.06.2022","10 AZN"));
 
     }
 }

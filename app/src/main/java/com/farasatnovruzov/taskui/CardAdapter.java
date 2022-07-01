@@ -7,37 +7,25 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.PagerAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
+public class CardAdapter extends PagerAdapter {
 
-
-public class Adapter extends PagerAdapter {
-
-    private List<Model> models;
+    private List<CardModel> cardModels;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    private int adapterPosition;
-
-    public int getAdapterPosition() {
-        return adapterPosition;
-    }
-//    private final List<Fragment> listFragment = new ArrayList<>();
-//    private final List<String> listTitles = new ArrayList<>();
-
-    public Adapter(List<Model> models, Context context) {
-        this.models = models;
+    public CardAdapter(List<CardModel> cardModels, Context context) {
+        this.cardModels = cardModels;
         this.context = context;
 
     }
 
     @Override
     public int getCount() {
-        return models.size();
+        return cardModels.size();
     }
 
     @Override
@@ -53,10 +41,9 @@ public class Adapter extends PagerAdapter {
 
         ImageView imageView;
         imageView = view.findViewById(R.id.image_card);
-        imageView.setImageResource(models.get(position).getImageID());
+        imageView.setImageResource(cardModels.get(position).getImageID());
 
         container.addView(view,0);
-        adapterPosition = position;
 
         return view;
     }
@@ -70,6 +57,5 @@ public class Adapter extends PagerAdapter {
     public float getPageWidth(int position) {
         return 0.8999f;
     }
-
 
 }

@@ -8,6 +8,7 @@
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/arrow_right_thick.xml" value="0.1375" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/back_select.xml" value="0.1335" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/back_tabs.xml" value="0.1335" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/customborder.xml" value="0.1525" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/default_pager_dot.xml" value="0.138" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/eye.xml" value="0.185" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/eye_off_outline.xml" value="0.138" />
@@ -18,11 +19,15 @@
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/menu.xml" value="0.1705" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/selected_pager_dot.xml" value="0.138" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/selector_tab_indicator_dot.xml" value="0.67" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/star.xml" value="0.15" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/swap_horizontal.xml" value="0.15" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/tab_back.xml" value="0.1645" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/tab_pager_selector.xml" value="0.138" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/wallet.xml" value="0.15" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/drawable/wallet_outline.xml" value="0.15" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout-v21/activity_main.xml" value="0.1765625" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout-v21/toolbar.xml" value="0.19114583333333332" />
-        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/card1_fragment.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/card2_fragment.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/card3_fragment.xml" value="0.1921875" />
@@ -32,12 +37,17 @@
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/first_card_fragment.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fourth_card_fragment.xml" value="0.1765625" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_blocked.xml" value="0.1921875" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_home.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_last_operations.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_navigation_drawer_layout.xml" value="0.1765625" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_one.xml" value="0.1921875" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_payments.xml" value="0.1921875" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_templates.xml" value="0.1921875" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/fragment_transfers.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/header.xml" value="0.16770833333333332" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/item.xml" value="0.12" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/item_card.xml" value="0.22" />
+        <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/item_card_info.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/item_first.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/second_card_fragment.xml" value="0.1921875" />
         <entry key="..\:/Users/faras/AndroidStudioProjects/TaskUI/app/src/main/res/layout/single_card_item.xml" value="0.1140625" />

@@ -1,6 +1,6 @@
 package com.farasatnovruzov.taskui;
 
-public class Model {
+public class CardModel {
 
     private int imageID;
 
@@ -8,7 +8,7 @@ public class Model {
         return imageID;
     }
 
-    public Model(int imageID) {
+    public CardModel(int imageID) {
         this.imageID = imageID;
     }
 

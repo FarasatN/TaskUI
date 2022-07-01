@@ -1,6 +1,6 @@
 package com.farasatnovruzov.taskui;
 
-public class TabModel {
+public class CardInfoModel {
 
     private String name;
     private String date;
@@ -23,7 +23,7 @@ public class TabModel {
         this.currency = currency;
     }
 
-    public TabModel(String name, int image, String date, String currency) {
+    public CardInfoModel(String name, int image, String date, String currency) {
         this.name = name;
         this.image = image;
         this.date = date;

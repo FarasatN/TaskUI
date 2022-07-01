@@ -71,18 +71,20 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
         </androidx.viewpager.widget.ViewPager>
-        
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/indicator"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:background="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/viewPager"
-                app:ci_drawable="@drawable/selector_tab_indicator_dot"
-                android:visibility="visible"
 
-                >
-            </me.relex.circleindicator.CircleIndicator>
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#FFFFFF"
+            android:visibility="visible"
+            app:ci_drawable="@drawable/selector_tab_indicator_dot"
+            app:ci_gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager">
+
+        </me.relex.circleindicator.CircleIndicator>
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -124,11 +126,14 @@
             app:tabGravity="fill"
             app:tabMode="fixed"
             android:visibility="invisible"
+            android:clickable="false"
             >
 
         </com.google.android.material.tabs.TabLayout>
 
-        <androidx.viewpager.widget.ViewPager
+
+        <com.farasatnovruzov.taskui.CustomViewPager
+            android:scrollIndicators="none"
             android:id="@+id/tabViewPager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -137,10 +142,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-            tools:ignore="SpeakableTextPresentCheck">
-
-
-        </androidx.viewpager.widget.ViewPager>
+            tools:ignore="SpeakableTextPresentCheck"
+            >
+        </com.farasatnovruzov.taskui.CustomViewPager>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView"

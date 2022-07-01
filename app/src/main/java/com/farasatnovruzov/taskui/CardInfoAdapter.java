@@ -6,15 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class TabAdapter extends FragmentStatePagerAdapter {
+public class CardInfoAdapter extends FragmentStatePagerAdapter {
 
-    List<Fragment> fragmentList = new ArrayList<>();
-    List<String> tabTitle = new ArrayList<>();
+    private List<Fragment> fragmentList;
+    private List<String> tabTitle;
 
-    public TabAdapter(@NonNull FragmentManager fm, List<Fragment> frList, List<String> titleList) {
+    public CardInfoAdapter(@NonNull FragmentManager fm, List<Fragment> frList, List<String> titleList) {
         super(fm);
         this.fragmentList = frList;
         this.tabTitle = titleList;

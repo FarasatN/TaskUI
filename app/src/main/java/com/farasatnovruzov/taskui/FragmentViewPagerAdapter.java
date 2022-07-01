@@ -15,7 +15,7 @@ import java.util.List;
 public class FragmentViewPagerAdapter extends FragmentStatePagerAdapter {
 
 
-    private List<Model> models;
+    private List<CardModel> cardModels;
     public FragmentViewPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -41,4 +41,6 @@ public class FragmentViewPagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return 4;
     }
+
+
 }
